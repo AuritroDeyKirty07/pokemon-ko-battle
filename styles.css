@@ -1,0 +1,193 @@
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #121212;
+  --text-light: #000;
+  --text-dark: #f5f5f5;
+  --primary: #4f46e5;
+}
+body {
+  background: var(--bg-dark);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -200px;
+  left: -200px;
+  width: 600px;
+  height: 600px;
+
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.35),
+    transparent 70%
+  );
+
+  filter: blur(80px);
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -250px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+
+  background: radial-gradient(
+    circle,
+    rgba(34, 211, 238, 0.35),
+    transparent 70%
+  );
+
+  filter: blur(90px);
+  z-index: -1;
+}
+
+.board {
+  margin-top: 10px;
+  display: flex;
+  gap: 80px;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+}
+
+input {
+  text-align: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  transition: 0.3s;
+  background-color: hsl(0, 88%, 40%);
+  border-radius: 15px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+img {
+  width: 150px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+#enter1 {
+  color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#enter2 {
+  color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+}
+
+.hpBar {
+  width: 200px;
+  height: 15px;
+  background: #333;
+}
+
+.hpFill {
+  height: 100%;
+  background: limegreen;
+  width: 0%;
+  transition: 0.5s;
+  transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+#fightBtn {
+  height: 60px;
+  width: 140px;
+  font-weight: bold;
+  background: rgb(8, 0, 255);
+  color: white;
+}
+
+#fightBtn:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+#fightBtnarea {
+  margin-top: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#searchInput1 {
+  width: 200px;
+  height: 30px;
+}
+#searchInput2 {
+  width: 200px;
+  height: 30px;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.4s ease;
+}
+
+.vs{
+    font-size:2rem;
+    font-weight:bold;
+    opacity:.6;
+    align-self:center;
+  }
+
+  #retryBtn,#newGameBtn{
+    margin-top:10px;
+    height:40px;
+    width:140px;
+    font-weight:bold;
+    background:#14b8a6;
+    color:white;
+    border:none;
+    cursor:pointer;
+  }

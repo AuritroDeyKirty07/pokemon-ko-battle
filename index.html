@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pokemon Battle</title>
+</head>
+<body>
+    <audio src=""></audio>
+
+<h1>Pokemon KO Battle</h1>
+
+<div class="board">
+    <audio id="hitSound" src="edr-video-game-hit-noise-001-135821.mp3"></audio>
+    <audio id= "drawSound" src= "freesound_community-game-start-6104.mp3"></audio>
+    <div class="card">
+        <h2>Player 1</h2>
+        <h3 id="msg1"></h3>
+        <form id="enter1">
+        <input type="text" id="searchInput1" placeholder="Enter Pokemon"><br>
+        <button type="button" onclick="fetchData1()">Select Character</button><br>
+        <img src="" id="pokiImg1" style="display:none;">
+        <h3 id="name1"></h3>
+        </form>
+        <h3>Score: <span id="score1">0</span></h3>
+        <span id="hp1"></span>
+
+        <div class="hpBar">
+            <div id="hpFill1" class="hpFill"></div>
+         </div>
+    </div>
+
+    <div id="fightBtnarea">
+    <h1 id="vs">VS</h1>
+    <button id="fightBtn" onclick="checkBattle()" disabled>FIGHT</button>
+    <button id="retryBtn" style="display:none;">Retry</button>
+<button id="newGameBtn" style="display:none;">New Game</button>
+    </div>
+
+    <div class="card">
+        <h2>Player 2</h2>
+        <h3 id="msg2"></h3>
+        <form id="enter2">
+        <input type="text" id="searchInput2" placeholder="Enter Pokemon"><br>
+        <button type="button" onclick="fetchData2()">Select Character</button><br>
+        <img src="" id="pokiImg2" style="display:none;">
+        <h3 id="name2"></h3>
+        </form>
+        <h3>Score: <span id="score2">0</span></h3>
+        <span id="hp2"></span>
+
+        <div class="hpBar">
+            <div id="hpFill2" class="hpFill"></div>
+         </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
