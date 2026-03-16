@@ -1,15 +1,17 @@
-# Pokemon KO Battle
+# 🎮 Pokemon KO Battle
 
 Interactive Pokemon battle simulator built with HTML, CSS and JavaScript.
 
-## Features
+## ✔ Features
 - API Fetch (PokeAPI)
 - Randomized battle logic
 - Animated HP bars
 - Sound effects
 
-## Live Demo
+## 🌐 Live Demo
 https://auritrodeykirty07.github.io/pokemon-ko-battle/
 
-## Tech
-HTML • CSS • JavaScript
+## 🛠 Tech Stack
+HTML5  
+CSS3  
+JavaScript
